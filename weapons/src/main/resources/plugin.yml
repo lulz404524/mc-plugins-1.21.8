@@ -1,0 +1,13 @@
+name: CustomItems-Weapons
+version: ${version}
+main: de.customitems.weapons.CustomItemsWeapons
+api-version: '1.21'
+description: Custom weapons plugin for CustomItems
+author: YourName
+depend: [CustomItems-Core]
+
+commands:
+  weapon:
+    description: Get a custom weapon
+    usage: /weapon <item_id>
+    aliases: [w, customweapon]

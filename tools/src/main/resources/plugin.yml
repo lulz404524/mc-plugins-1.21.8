@@ -1,0 +1,7 @@
+name: CustomItems-Tools
+version: ${version}
+main: de.customitems.tools.CustomItemsTools
+api-version: '1.21'
+description: Custom tools plugin for CustomItems
+author: YourName
+depend: [CustomItems-Core]

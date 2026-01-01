@@ -1,0 +1,7 @@
+name: CustomItems-Food
+version: ${version}
+main: de.customitems.food.CustomItemsFood
+api-version: '1.21'
+description: Custom food plugin for CustomItems
+author: YourName
+depend: [CustomItems-Core]

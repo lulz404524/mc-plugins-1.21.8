@@ -1,0 +1,6 @@
+name: CustomItems-Core
+version: ${version}
+main: de.customitems.core.CustomItemsCore
+api-version: '1.21'
+description: Core plugin for CustomItems system
+author: YourName

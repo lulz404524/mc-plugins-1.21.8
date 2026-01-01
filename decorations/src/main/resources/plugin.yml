@@ -1,0 +1,7 @@
+name: CustomItems-Decorations
+version: ${version}
+main: de.customitems.decorations.CustomItemsDecorations
+api-version: '1.21'
+description: Custom decorations plugin for CustomItems
+author: YourName
+depend: [CustomItems-Core]

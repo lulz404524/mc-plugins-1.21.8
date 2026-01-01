@@ -1,0 +1,8 @@
+rootProject.name = 'CustomItems'
+
+include 'core'
+include 'armor'
+include 'weapons'
+include 'tools'
+include 'decorations'
+include 'food'

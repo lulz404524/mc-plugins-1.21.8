@@ -1,0 +1,7 @@
+name: CustomItems-Armor
+version: ${version}
+main: de.customitems.armor.CustomItemsArmor
+api-version: '1.21'
+description: Custom armor plugin for CustomItems
+author: YourName
+depend: [CustomItems-Core]
