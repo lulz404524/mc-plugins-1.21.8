@@ -5,3 +5,9 @@ api-version: '1.21'
 description: Custom armor plugin for CustomItems
 author: YourName
 depend: [CustomItems-Core]
+
+commands:
+  armor:
+    description: Get a custom armor piece
+    usage: /armor <item_id>
+    aliases: [a, customarmor]

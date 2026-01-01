@@ -5,3 +5,9 @@ api-version: '1.21'
 description: Custom food plugin for CustomItems
 author: YourName
 depend: [CustomItems-Core]
+
+commands:
+  food:
+    description: Get a custom food item
+    usage: /food <item_id>
+    aliases: [f, customfood]

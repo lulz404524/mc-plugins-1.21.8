@@ -5,3 +5,9 @@ api-version: '1.21'
 description: Custom tools plugin for CustomItems
 author: YourName
 depend: [CustomItems-Core]
+
+commands:
+  tool:
+    description: Get a custom tool
+    usage: /tool <item_id>
+    aliases: [t, customtool]

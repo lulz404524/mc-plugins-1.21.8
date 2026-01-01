@@ -1,0 +1,76 @@
+name: Build CustomItems Plugins
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: Upload Core Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: CustomItems-Core
+        path: core/build/libs/*.jar
+
+    - name: Upload Weapons Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: CustomItems-Weapons
+        path: weapons/build/libs/*.jar
+
+    - name: Upload Food Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: CustomItems-Food
+        path: food/build/libs/*.jar
+
+    - name: Upload Armor Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: CustomItems-Armor
+        path: armor/build/libs/*.jar
+
+    - name: Upload Tools Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: CustomItems-Tools
+        path: tools/build/libs/*.jar
+
+    - name: Upload Decorations Plugin
+      uses: actions/upload-artifact@v4
+      with:
+        name: CustomItems-Decorations
+        path: decorations/build/libs/*.jar
+
+    - name: Upload All Plugins (Bundle)
+      uses: actions/upload-artifact@v4
+      with:
+        name: CustomItems-All-Plugins
+        path: |
+          core/build/libs/*.jar
+          weapons/build/libs/*.jar
+          food/build/libs/*.jar
+          armor/build/libs/*.jar
+          tools/build/libs/*.jar
+          decorations/build/libs/*.jar
